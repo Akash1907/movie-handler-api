@@ -19,10 +19,12 @@ const options = {
     },
     servers: [
       {
-        url: process.env.NODE_ENV === 'production' 
-          ? 'https://your-production-url.com/api' 
-          : `http://localhost:${process.env.PORT || 5000}/api`,
-        description: process.env.NODE_ENV === 'production' ? 'Production Server' : 'Development Server'
+        url: `http://localhost:${process.env.PORT || 5000}/api`,
+        description: 'Local Development Server'
+      },
+      {
+        url: 'https://movie-handler-api.onrender.com/api',
+        description: 'Production Server (Render)'
       }
     ],
     components: {
